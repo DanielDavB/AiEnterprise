@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Lab Enterprise — The AI Powered Enterprise</title>
+  <meta name="description" content="Specialized agents. Automated workflows. One orchestration layer running underneath it all. This is what it looks like when a company operates with artificial intelligence." />
+  <meta name="theme-color" content="#050b18" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- ============ ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M8 17v-4"/><path d="M13 17V8"/><path d="M18 17V5"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24"><line x1="5" y1="20" x2="5" y2="13"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="19" y1="20" x2="19" y2="4"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="7 4 20 12 7 20 7 4"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><rect x="1" y="4" width="14" height="12" rx="1"/><polygon points="15 8 19 8 23 12 23 16 15 16 15 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><polyline points="4 12 9 12 10.5 9.5 13 14.5 14.5 12 20 12"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="5"/><line x1="15" y1="1" x2="15" y2="5"/><line x1="9" y1="19" x2="9" y2="23"/><line x1="15" y1="19" x2="15" y2="23"/><line x1="19" y1="9" x2="23" y2="9"/><line x1="19" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="5" y2="9"/><line x1="1" y1="15" x2="5" y2="15"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></symbol>
+    <symbol id="i-net" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 6.5 9.5 10M18 6.5 14.5 10M6 17.5 9.5 14M18 17.5 14.5 14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></symbol>
+  </defs>
+</svg>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="AI Lab Enterprise home">
+      <span class="brand-mark">AI <span>LAB</span></span>
+      <span class="brand-word">ENTERPRISE</span>
+      <span class="brand-tag">THE AI POWERED ENTERPRISE</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#category" data-text="Category"><span>Category</span></a>
+      <a href="#architecture" data-text="Architecture"><span>Architecture</span></a>
+      <a href="#how" data-text="How it works"><span>How it works</span></a>
+      <a href="#proof" data-text="Proof"><span>Proof</span></a>
+    </nav>
+    <a href="#diagnostic" class="btn btn-gold btn-sm header-cta magnetic">Get Your AI Diagnostic <svg class="ico"><use href="#i-arrow"/></svg></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg class="ico"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<!-- 3D section navigator -->
+<nav class="section-nav" aria-label="Sections">
+  <a href="#hero" data-label="System"><i></i></a>
+  <a href="#category" data-label="Category"><i></i></a>
+  <a href="#architecture" data-label="Architecture"><i></i></a>
+  <a href="#how" data-label="How it works"><i></i></a>
+  <a href="#proof" data-label="Proof"><i></i></a>
+  <a href="#diagnostic" data-label="Diagnostic"><i></i></a>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero dark" id="hero">
+  <div class="grid-floor" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal"><span class="dash"></span>SYSTEM NOMINAL <span class="blink-dot"></span></p>
+      <h1 class="hero-title reveal" data-split>
+        Welcome to the<br />
+        <span class="gold-text">AI Powered<br />Enterprise</span>
+      </h1>
+      <p class="hero-lead reveal">Specialized agents. Automated workflows. One orchestration layer running underneath it all. This is what it looks like when a company operates with artificial intelligence — not around it.</p>
+      <div class="hero-actions reveal">
+        <a href="#diagnostic" class="btn btn-gold magnetic">Get Your AI Diagnostic <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="#architecture" class="btn btn-ghost magnetic">Explore the System</a>
+      </div>
+      <a href="#system" class="scroll-hint reveal"><svg class="ico"><use href="#i-down"/></svg> SCROLL TO ACTIVATE THE WORKFORCE</a>
+    </div>
+
+    <!-- 3D orchestration scene -->
+    <div class="orchestra" id="orchestra" aria-label="Orchestration diagram of six AI agents">
+      <div class="orchestra-scene">
+        <svg class="orchestra-lines" viewBox="0 0 600 440" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="lineGrad" x1="0" x2="1">
+              <stop offset="0" stop-color="#3d8bff" stop-opacity=".1"/>
+              <stop offset=".5" stop-color="#5aa2ff" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#3d8bff" stop-opacity=".1"/>
+            </linearGradient>
+          </defs>
+          <path class="o-line" d="M300 215 L300 70"/>
+          <path class="o-line" d="M300 215 C220 200 170 150 120 120"/>
+          <path class="o-line" d="M300 215 C380 200 430 150 480 120"/>
+          <path class="o-line" d="M300 215 C220 220 160 215 95 200"/>
+          <path class="o-line" d="M300 215 C380 220 440 215 505 200"/>
+          <path class="o-line" d="M300 215 C260 250 220 270 180 300"/>
+          <path class="o-line" d="M300 215 C340 250 380 270 420 300"/>
+          <circle r="3" class="o-pulse"><animateMotion dur="2.6s" repeatCount="indefinite" path="M300 215 C220 200 170 150 120 120"/></circle>
+          <circle r="3" class="o-pulse"><animateMotion dur="3.1s" repeatCount="indefinite" path="M480 120 C430 150 380 200 300 215"/></circle>
+          <circle r="3" class="o-pulse"><animateMotion dur="2.2s" repeatCount="indefinite" path="M300 215 C220 220 160 215 95 200"/></circle>
+          <circle r="3" class="o-pulse"><animateMotion dur="2.8s" repeatCount="indefinite" path="M505 200 C440 215 380 220 300 215"/></circle>
+          <circle r="3" class="o-pulse"><animateMotion dur="2.4s" repeatCount="indefinite" path="M300 215 C260 250 220 270 180 300"/></circle>
+          <circle r="3" class="o-pulse"><animateMotion dur="3.4s" repeatCount="indefinite" path="M420 300 C380 270 340 250 300 215"/></circle>
+          <circle r="3" class="o-pulse gold"><animateMotion dur="1.8s" repeatCount="indefinite" path="M300 70 L300 215"/></circle>
+        </svg>
+
+        <div class="o-card o-top" style="--z:60px">
+          <span class="o-title">ORCHESTRATION LAYER</span>
+          <span class="o-sub">COORDINATING<span class="dots"><i></i><i></i><i></i></span></span>
+        </div>
+
+        <div class="chip3d" aria-hidden="true">
+          <div class="chip-glow"></div>
+          <div class="chip-stack">
+            <div class="chip-layer l1"></div>
+            <div class="chip-layer l2"></div>
+            <div class="chip-layer l3"></div>
+            <div class="chip-layer l4"><span>AI</span><div class="chip-pins"></div></div>
+          </div>
+        </div>
+
+        <div class="o-card agent" style="--x:6%;--y:16%;--z:40px" data-agent="finance">
+          <svg class="ico ico-lg"><use href="#i-chart"/></svg>
+          <div><b>FINANCE AGENT</b><em>NOMINAL</em></div>
+        </div>
+        <div class="o-card agent" style="--x:69%;--y:16%;--z:40px" data-agent="support">
+          <svg class="ico ico-lg"><use href="#i-headset"/></svg>
+          <div><b>SUPPORT AGENT</b><em>NOMINAL</em></div>
+        </div>
+        <div class="o-card agent" style="--x:0%;--y:38%;--z:20px" data-agent="market">
+          <svg class="ico ico-lg"><use href="#i-bars"/></svg>
+          <div><b>MARKET<br />INTELLIGENCE AGENT</b><em>NOMINAL</em></div>
+        </div>
+        <div class="o-card agent" style="--x:73%;--y:38%;--z:20px" data-agent="content">
+          <svg class="ico ico-lg"><use href="#i-doc"/></svg>
+          <div><b>CONTENT AGENT</b><em>NOMINAL</em></div>
+        </div>
+        <div class="o-card agent" style="--x:13%;--y:63%;--z:50px" data-agent="sales">
+          <svg class="ico ico-lg"><use href="#i-users"/></svg>
+          <div><b>SALES AGENT</b><em>NOMINAL</em></div>
+        </div>
+        <div class="o-card agent" style="--x:58%;--y:63%;--z:50px" data-agent="ops">
+          <svg class="ico ico-lg"><use href="#i-gear"/></svg>
+          <div><b>OPERATIONS AGENT</b><em>NOMINAL</em></div>
+        </div>
+      </div>
+      <p class="orchestra-note">MANY<br />MINDS.<br />ONE<br />SYSTEM.</p>
+    </div>
+  </div>
+
+  <!-- System steps -->
+  <div class="container" id="system">
+    <div class="steps-bar panel reveal">
+      <div class="steps-head">
+        <span class="micro">AI POWERED ENTERPRISE</span>
+        <div class="steps-count"><strong data-count="13">0</strong><span>SYSTEM STEPS</span></div>
+      </div>
+      <div class="steps-track" aria-hidden="true">
+        <div class="steps-line"><span></span></div>
+        <div class="steps-dots"></div>
+      </div>
+      <div class="steps-status"><span class="status-text">EXECUTING…</span><span class="status-dot"></span></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat panel tilt reveal"><div><strong data-count="6" data-pad="2">00</strong><span>AGENTS ONLINE</span></div><svg class="ico gold"><use href="#i-net"/></svg></div>
+      <div class="stat panel tilt reveal"><div><strong data-count="14">0</strong><span>ACTIVE WORKFLOWS</span></div><svg class="ico gold"><use href="#i-zap"/></svg></div>
+      <div class="stat panel tilt reveal"><div><strong data-count="212" data-live>0</strong><span>TASKS EXECUTING</span></div><svg class="ico"><use href="#i-layers"/></svg></div>
+      <div class="stat panel tilt reveal"><div><strong data-count="3" data-pad="2">00</strong><span>HUMAN CHECKPOINTS</span></div><svg class="ico gold"><use href="#i-user"/></svg></div>
+      <div class="stat stat-status panel tilt reveal"><span class="big-dot"></span><div><strong class="green-text">NOMINAL</strong><span>SYSTEM STATUS</span></div></div>
+    </div>
+
+    <div class="featured reveal">
+      <span class="micro">AS FEATURED IN</span>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span class="press press-serif">Forbes</span>
+          <span class="press press-serif2">Entrepreneur</span>
+          <span class="press press-condensed">SHARK TANK</span>
+          <span class="press press-serif2">Expansión</span>
+          <span class="press press-sans"><b>y!</b> Yahoo News</span>
+          <span class="press press-serif" aria-hidden="true">Forbes</span>
+          <span class="press press-serif2" aria-hidden="true">Entrepreneur</span>
+          <span class="press press-condensed" aria-hidden="true">SHARK TANK</span>
+          <span class="press press-serif2" aria-hidden="true">Expansión</span>
+          <span class="press press-sans" aria-hidden="true"><b>y!</b> Yahoo News</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORY ============ -->
+<section class="category light" id="category">
+  <div class="container category-grid">
+    <div class="category-copy">
+      <p class="eyebrow blue reveal"><span class="dash"></span>CATEGORY</p>
+      <h2 class="h2 reveal">There's “using AI.”<br />And there's being an<br /><span class="gold-text">AI Powered Enterprise.</span></h2>
+      <p class="reveal">Most companies bolt AI onto what they already do — a chatbot here, a copilot there. An AI Powered Enterprise is built differently. Every function, every workflow, every decision point is designed to operate alongside specialized intelligence from day one. It's not a feature. It's an operating model — and we built the system that runs it.</p>
+    </div>
+
+    <div class="orbit-wrap reveal" aria-label="One brain connected to six business functions">
+      <div class="orbit" id="orbit">
+        <div class="orbit-ring r1"></div>
+        <div class="orbit-ring r2"></div>
+        <svg class="orbit-spokes" viewBox="0 0 400 400" aria-hidden="true">
+          <circle cx="200" cy="200" r="150" class="spoke-circle"/>
+        </svg>
+        <div class="orbit-core">
+          <span class="core-pulse"></span>
+          <b>ONE BRAIN</b>
+          <small>KNOWLEDGE<br />INFRASTRUCTURE</small>
+        </div>
+        <div class="orbit-rotor">
+          <div class="orbit-node" style="--a:0deg"><div class="node-inner"><span class="node-ico"><svg class="ico"><use href="#i-bank"/></svg></span><b>FINANCE</b></div></div>
+          <div class="orbit-node" style="--a:60deg"><div class="node-inner"><span class="node-ico"><svg class="ico"><use href="#i-headset"/></svg></span><b>SUPPORT</b></div></div>
+          <div class="orbit-node" style="--a:120deg"><div class="node-inner"><span class="node-ico"><svg class="ico"><use href="#i-doc"/></svg></span><b>CONTENT</b></div></div>
+          <div class="orbit-node" style="--a:180deg"><div class="node-inner"><span class="node-ico"><svg class="ico"><use href="#i-gear"/></svg></span><b>OPERATIONS</b></div></div>
+          <div class="orbit-node" style="--a:240deg"><div class="node-inner"><span class="node-ico"><svg class="ico"><use href="#i-users"/></svg></span><b>SALES</b></div></div>
+          <div class="orbit-node" style="--a:300deg"><div class="node-inner"><span class="node-ico"><svg class="ico"><use href="#i-chart"/></svg></span><b>MARKET INTEL</b></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-notes">
+      <p class="note reveal">ZERO FRICTION<br />CONNECTED<br />WORKFLOWS</p>
+      <p class="note reveal">A COORDINATED<br />WORKFORCE<br />SPECIALIZED AGENTS ·<br />ONE ORCHESTRATION LAYER</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE ============ -->
+<section class="architecture dark" id="architecture">
+  <div class="container">
+    <div class="arch-head">
+      <div>
+        <p class="eyebrow blue reveal"><span class="dash"></span>ARCHITECTURE</p>
+        <h2 class="h2 reveal">The Architecture of an<br /><span class="gold-text">AI Powered Enterprise</span></h2>
+        <p class="sub reveal">Four layers. Fully integrated. Engineered to compound.</p>
+      </div>
+      <div class="arch-tabs reveal" role="tablist" aria-label="Architecture layers">
+        <button role="tab" class="arch-tab is-active" aria-selected="true" data-layer="0"><span>01</span>Knowledge<i class="tab-progress"></i></button>
+        <button role="tab" class="arch-tab" aria-selected="false" data-layer="1"><span>02</span>Velocity<i class="tab-progress"></i></button>
+        <button role="tab" class="arch-tab" aria-selected="false" data-layer="2"><span>03</span>Execution<i class="tab-progress"></i></button>
+        <button role="tab" class="arch-tab" aria-selected="false" data-layer="3"><span>04</span>Coordination<i class="tab-progress"></i></button>
+      </div>
+    </div>
+
+    <div class="arch-viewport reveal">
+      <button class="arch-arrow prev" aria-label="Previous layer"><svg class="ico"><use href="#i-left"/></svg></button>
+      <button class="arch-arrow next" aria-label="Next layer"><svg class="ico"><use href="#i-right"/></svg></button>
+
+      <div class="arch-stage">
+        <!-- LAYER 01 -->
+        <article class="layer panel is-active" data-index="0" role="tabpanel">
+          <div class="layer-copy">
+            <p class="layer-kicker">LAYER 01 — KNOWLEDGE</p>
+            <h3>The knowledge infrastructure<br />your company has never had</h3>
+            <p>Every document, process, historical record, and report your company has ever produced — structured into a living knowledge base your AI can reason with directly. Not storage. Infrastructure.</p>
+            <ul class="checks">
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Pattern and correlation detection</b><small>Surfaces relationships across sales, operations, and finance.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Programmatic knowledge layers</b><small>Information structured for AI to query, reason over, and update.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Knowledge graph visualization</b><small>See how everything in your company connects.</small></div></li>
+            </ul>
+            <p class="layer-foot">Institutional knowledge, finally built to scale.</p>
+          </div>
+          <div class="layer-visual kg panel-inner">
+            <div class="kg-head"><b>KNOWLEDGE GRAPH</b><small>NODES <span data-count="2340" data-fmt>0</span> · EDGES <span data-count="4992" data-fmt>0</span></small></div>
+            <div class="kg-body">
+              <svg class="kg-svg" viewBox="0 0 520 250" preserveAspectRatio="none" aria-hidden="true">
+                <g class="kg-edges">
+                  <path d="M60 40 L150 70"/><path d="M60 95 L150 70"/><path d="M60 150 L150 160"/>
+                  <path d="M150 70 L260 125"/><path d="M150 160 L260 125"/><path d="M370 70 L260 125"/><path d="M370 160 L260 125"/>
+                  <path d="M150 70 L370 70" class="faint"/><path d="M150 160 L370 160" class="faint"/>
+                  <path d="M370 70 L460 40"/><path d="M370 70 L460 85"/><path d="M370 160 L460 130"/><path d="M370 160 L460 175"/>
+                  <path d="M150 70 L110 20" class="faint"/><path d="M150 160 L110 215" class="faint"/><path d="M370 70 L410 20" class="faint"/><path d="M370 160 L410 220" class="faint"/>
+                  <path d="M260 125 L260 230" class="faint"/>
+                </g>
+                <g class="kg-flow">
+                  <path d="M150 70 L260 125"/><path d="M260 125 L370 160"/><path d="M370 160 L460 130"/>
+                </g>
+                <circle r="3.5" class="kg-pulse"><animateMotion dur="3s" repeatCount="indefinite" path="M150 70 L260 125 L370 160 L460 130"/></circle>
+                <circle r="3" class="kg-pulse b"><animateMotion dur="4s" repeatCount="indefinite" path="M60 40 L150 70 L260 125 L370 70 L460 85"/></circle>
+                <circle r="3" class="kg-pulse b"><animateMotion dur="3.6s" repeatCount="indefinite" path="M60 150 L150 160 L260 125 L370 160 L460 175"/></circle>
+                <g class="kg-dots"><circle cx="110" cy="20" r="2.5"/><circle cx="110" cy="215" r="2.5"/><circle cx="410" cy="20" r="2.5"/><circle cx="410" cy="220" r="2.5"/><circle cx="260" cy="230" r="3"/></g>
+              </svg>
+              <div class="kg-node" style="left:35.8%;top:28%"><svg class="ico"><use href="#i-users"/></svg><small>SALES</small></div>
+              <div class="kg-node" style="left:64.2%;top:28%"><svg class="ico"><use href="#i-gear"/></svg><small>SUPPORT</small></div>
+              <div class="kg-node core" style="left:50%;top:50%"><svg class="ico"><use href="#i-gear"/></svg><small>FINANCE</small></div>
+              <div class="kg-node" style="left:35.8%;top:64%"><svg class="ico"><use href="#i-gear"/></svg><small>OPERATIONS</small></div>
+              <div class="kg-node" style="left:64.2%;top:64%"><svg class="ico"><use href="#i-gear"/></svg><small>OPERATIONS</small></div>
+
+              <div class="kg-tag l" style="top:16%"><svg class="ico"><use href="#i-file"/></svg>SOP</div>
+              <div class="kg-tag l" style="top:38%"><svg class="ico"><use href="#i-file"/></svg>CONTRACTS</div>
+              <div class="kg-tag l" style="top:60%"><svg class="ico"><use href="#i-file"/></svg>Q2 REPORTS</div>
+              <div class="kg-tag r" style="top:12%"><svg class="ico"><use href="#i-user"/></svg>ACCT 1042</div>
+              <div class="kg-tag r hot" style="top:31%"><svg class="ico"><use href="#i-doc"/></svg>INV-3902</div>
+              <div class="kg-tag r" style="top:50%"><svg class="ico"><use href="#i-file"/></svg>BILLING</div>
+              <div class="kg-tag r" style="top:69%"><svg class="ico"><use href="#i-file"/></svg>ONBOARDING</div>
+            </div>
+            <div class="kg-query">
+              <span class="q-ico"><svg class="ico"><use href="#i-search"/></svg></span>
+              <div><b>AGENT QUERY · FINANCE AGENT</b><p class="typed" data-typed="→ FINANCE → BILLING → INV-3902 · 3 CORRELATIONS FOUND"></p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LAYER 02 -->
+        <article class="layer panel" data-index="1" role="tabpanel">
+          <div class="layer-copy">
+            <p class="layer-kicker">LAYER 02 — VELOCITY</p>
+            <h3>Workflows that move at<br />the speed of decisions</h3>
+            <p>Repetitive handoffs, approvals, and reporting cycles become automated pipelines. Your team stops pushing work forward manually — the system moves it for them, end to end.</p>
+            <ul class="checks">
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>End-to-end workflow automation</b><small>From trigger to delivery without manual handoffs.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Event-driven triggers</b><small>Workflows fire the moment your data changes.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Cycle-time analytics</b><small>Measure and compress every process continuously.</small></div></li>
+            </ul>
+            <p class="layer-foot">Less waiting. More compounding.</p>
+          </div>
+          <div class="layer-visual vel panel-inner">
+            <div class="kg-head"><b>WORKFLOW PIPELINES</b><small><span data-count="14">0</span> ACTIVE · AVG CYCLE 4.2 MIN</small></div>
+            <div class="lanes">
+              <div class="lane"><span class="lane-name">LEAD → CRM</span><div class="lane-track"><i></i><i></i><i></i></div><span class="lane-val">98%</span></div>
+              <div class="lane"><span class="lane-name">INVOICE → LEDGER</span><div class="lane-track"><i></i><i></i></div><span class="lane-val">100%</span></div>
+              <div class="lane"><span class="lane-name">TICKET → RESOLVE</span><div class="lane-track"><i></i><i></i><i></i><i></i></div><span class="lane-val">94%</span></div>
+              <div class="lane"><span class="lane-name">BRIEF → CONTENT</span><div class="lane-track"><i></i><i></i></div><span class="lane-val">97%</span></div>
+              <div class="lane"><span class="lane-name">PO → APPROVAL</span><div class="lane-track"><i></i><i></i><i></i></div><span class="lane-val">99%</span></div>
+            </div>
+            <div class="vel-bars">
+              <div class="vb-col"><div class="vb" style="--h:82%"></div><small>BEFORE</small></div>
+              <div class="vb-col"><div class="vb" style="--h:64%"></div><small>W1</small></div>
+              <div class="vb-col"><div class="vb" style="--h:46%"></div><small>W2</small></div>
+              <div class="vb-col"><div class="vb" style="--h:32%"></div><small>W3</small></div>
+              <div class="vb-col"><div class="vb gold" style="--h:20%"></div><small>NOW</small></div>
+              <div class="vb-label"><b>−76%</b><small>CYCLE TIME</small></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LAYER 03 -->
+        <article class="layer panel" data-index="2" role="tabpanel">
+          <div class="layer-copy">
+            <p class="layer-kicker">LAYER 03 — EXECUTION</p>
+            <h3>Specialized agents that<br />actually do the work</h3>
+            <p>Each agent is trained on one function and connected to the tools your team already uses. They draft, reconcile, research, respond, and report — with full traceability on every action.</p>
+            <ul class="checks">
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Function-specific agents</b><small>Finance, sales, support, content, ops, market intel.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Native tool integrations</b><small>They operate inside the stack you already have.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Full audit trail</b><small>Every action logged, explainable, reversible.</small></div></li>
+            </ul>
+            <p class="layer-foot">A workforce that never clocks out.</p>
+          </div>
+          <div class="layer-visual exec panel-inner">
+            <div class="kg-head"><b>EXECUTION LOG</b><small>LIVE · <span class="live-count">212</span> TASKS</small></div>
+            <div class="terminal" id="terminal" aria-live="off"></div>
+          </div>
+        </article>
+
+        <!-- LAYER 04 -->
+        <article class="layer panel" data-index="3" role="tabpanel">
+          <div class="layer-copy">
+            <p class="layer-kicker">LAYER 04 — COORDINATION</p>
+            <h3>One orchestration layer.<br />Humans always in control.</h3>
+            <p>The orchestration layer routes work between agents, resolves dependencies, and escalates to your people at the checkpoints that matter. Autonomy where it's safe. Judgment where it counts.</p>
+            <ul class="checks">
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Multi-agent routing</b><small>The right agent for every task, automatically.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>Human checkpoints</b><small>Approvals built into every critical decision.</small></div></li>
+              <li><span class="check"><svg class="ico"><use href="#i-check"/></svg></span><div><b>System-wide observability</b><small>One view of everything your AI workforce is doing.</small></div></li>
+            </ul>
+            <p class="layer-foot">Many minds. One system.</p>
+          </div>
+          <div class="layer-visual coord panel-inner">
+            <div class="kg-head"><b>ORCHESTRATION</b><small>ROUTING · 3 HUMAN CHECKPOINTS</small></div>
+            <div class="coord-body">
+              <div class="coord-hub"><span>ORCHESTRATOR</span></div>
+              <div class="coord-ring">
+                <span style="--a:0deg">FIN</span><span style="--a:60deg">SUP</span><span style="--a:120deg">CNT</span>
+                <span style="--a:180deg">OPS</span><span style="--a:240deg">SLS</span><span style="--a:300deg">MKT</span>
+              </div>
+              <div class="coord-human"><svg class="ico"><use href="#i-user"/></svg><div><b>HUMAN CHECKPOINT</b><small>Approve PO #4471 · $18,400</small></div><button class="mini-btn" type="button">APPROVE</button></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how light" id="how">
+  <div class="container">
+    <div class="how-head reveal">
+      <p class="eyebrow blue"><span class="dash"></span>HOW IT WORKS</p>
+      <h2 class="h3">Becoming an AI Powered Enterprise — in four moves</h2>
+    </div>
+    <div class="moves">
+      <div class="move tilt reveal">
+        <span class="move-ico"><svg class="ico"><use href="#i-search"/></svg></span>
+        <div class="move-body">
+          <span class="move-num">01</span>
+          <h4>DIAGNOSE</h4>
+          <p>We map your operation and identify where intelligence creates the highest leverage.</p>
+          <span class="move-tag">BUSINESS</span>
+        </div>
+        <svg class="ico move-arrow"><use href="#i-arrow"/></svg>
+      </div>
+      <div class="move tilt reveal">
+        <span class="move-ico"><svg class="ico"><use href="#i-cube"/></svg></span>
+        <div class="move-body">
+          <span class="move-num">02</span>
+          <h4>ARCHITECT</h4>
+          <p>We design your system: Second Brain, automation, agents, and orchestration.</p>
+          <span class="move-tag">INTELLIGENCE</span>
+        </div>
+        <svg class="ico move-arrow"><use href="#i-arrow"/></svg>
+      </div>
+      <div class="move tilt reveal">
+        <span class="move-ico"><svg class="ico"><use href="#i-play"/></svg></span>
+        <div class="move-body">
+          <span class="move-num">03</span>
+          <h4>DEPLOY</h4>
+          <p>We integrate with the tools you already use. No downtime. No disruptive migrations.</p>
+          <span class="move-tag">AGENTS</span>
+        </div>
+        <svg class="ico move-arrow"><use href="#i-arrow"/></svg>
+      </div>
+      <div class="move tilt reveal">
+        <span class="move-ico"><svg class="ico"><use href="#i-chart"/></svg></span>
+        <div class="move-body">
+          <span class="move-num">04</span>
+          <h4>SCALE</h4>
+          <p>The system compounds as your company grows — intelligence that expands with you.</p>
+          <span class="move-tag">ORCHESTRATION</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="proof dark" id="proof">
+  <div class="container proof-grid">
+    <div>
+      <p class="eyebrow blue reveal"><span class="dash"></span>SUCCESS STORIES</p>
+      <h2 class="h3 reveal">Proof, not promises</h2>
+      <p class="sub reveal">Companies already operating as AI Powered Enterprises.</p>
+      <div class="cases">
+        <a href="#diagnostic" class="case panel tilt reveal">
+          <svg class="ico ico-lg"><use href="#i-truck"/></svg>
+          <div><b>LogiTrans</b><small>Logistics</small><strong><span data-count="38">0</span>%</strong><em>reduction in<br />response time</em></div>
+          <svg class="ico case-arrow"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#diagnostic" class="case panel tilt reveal">
+          <svg class="ico ico-lg"><use href="#i-heart"/></svg>
+          <div><b>SaludTech</b><small>Healthcare</small><strong><span data-count="27">0</span></strong><em>hours saved<br />per week</em></div>
+          <svg class="ico case-arrow"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#diagnostic" class="case panel tilt reveal">
+          <svg class="ico ico-lg"><use href="#i-bag"/></svg>
+          <div><b>RetailMax</b><small>Retail</small><strong><span data-count="42">0</span>%</strong><em>faster reporting<br />cycle</em></div>
+          <svg class="ico case-arrow"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+    <aside class="proof-side reveal">
+      <p>Engineered by the team behind AI Lab School — featured on Shark Tank and Forbes. Now bringing that same rigor to enterprise AI.</p>
+      <button class="watch" type="button" data-open-modal>
+        <span class="play-ring"><svg class="ico"><use href="#i-play"/></svg></span>
+        <span>Watch the story<small>1:32</small></span>
+      </button>
+    </aside>
+  </div>
+
+  <!-- CTA -->
+  <div class="container" id="diagnostic">
+    <div class="cta panel reveal">
+      <div class="cta-visual" aria-hidden="true">
+        <svg viewBox="0 0 320 220" preserveAspectRatio="xMidYMid slice" class="city">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1d3d"/><stop offset="1" stop-color="#1b3a6b"/></linearGradient>
+            <linearGradient id="tower" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0d1a33"/><stop offset=".6" stop-color="#1b2f55"/><stop offset="1" stop-color="#0a1428"/></linearGradient>
+            <linearGradient id="tower2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16294b"/><stop offset="1" stop-color="#0a1428"/></linearGradient>
+            <pattern id="win" width="10" height="12" patternUnits="userSpaceOnUse"><rect x="1" y="2" width="7" height="8" fill="#3d6fb8" opacity=".35"/></pattern>
+            <pattern id="win2" width="8" height="10" patternUnits="userSpaceOnUse"><rect x="1" y="2" width="5" height="6" fill="#f2c66d" opacity=".25"/></pattern>
+          </defs>
+          <rect width="320" height="220" fill="url(#sky)"/>
+          <circle cx="250" cy="40" r="60" fill="#3d8bff" opacity=".12"/>
+          <polygon points="10,220 10,90 60,70 60,220" fill="url(#tower2)"/>
+          <polygon points="10,220 10,90 60,70 60,220" fill="url(#win2)"/>
+          <polygon points="70,220 70,30 170,5 170,220" fill="url(#tower)"/>
+          <polygon points="70,220 70,30 170,5 170,220" fill="url(#win)"/>
+          <polygon points="170,220 170,5 215,35 215,220" fill="#08132a"/>
+          <polygon points="170,220 170,5 215,35 215,220" fill="url(#win2)" opacity=".6"/>
+          <polygon points="225,220 225,110 300,100 300,220" fill="url(#tower2)"/>
+          <polygon points="225,220 225,110 300,100 300,220" fill="url(#win)"/>
+          <rect x="0" y="200" width="320" height="20" fill="#050b18" opacity=".8"/>
+          <g class="city-lights"><circle cx="95" cy="60" r="1.5"/><circle cx="140" cy="110" r="1.5"/><circle cx="250" cy="150" r="1.5"/><circle cx="30" cy="140" r="1.5"/></g>
+        </svg>
+        <div class="scan"></div>
+      </div>
+      <div class="cta-copy">
+        <h2><span class="blue-text">The AI Powered Enterprise</span><br />isn't coming. It's already here.</h2>
+        <p>One diagnostic call. No commitment. Find out exactly where your company stands — and what it takes to operate as an AI Powered Enterprise.</p>
+        <div class="hero-actions">
+          <a href="mailto:hello@ailab.school?subject=AI%20Diagnostic" class="btn btn-gold magnetic">Get Your AI Diagnostic <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a href="mailto:hello@ailab.school?subject=Talk%20to%20a%20Specialist" class="btn btn-ghost magnetic">Talk to a Specialist</a>
+        </div>
+      </div>
+      <ul class="cta-status">
+        <li><span><svg class="ico"><use href="#i-user"/></svg></span><b>AGENTS</b><em>ONLINE</em></li>
+        <li><span><svg class="ico"><use href="#i-zap"/></svg></span><b>WORKFLOWS</b><em>MOVING</em></li>
+        <li><span><svg class="ico"><use href="#i-building"/></svg></span><b>ENTERPRISE</b><em>OPERATING</em></li>
+        <li><span><svg class="ico"><use href="#i-user"/></svg></span><b>HUMANS</b><em>IN CONTROL</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#top" class="brand" aria-label="AI Lab Enterprise">
+      <span class="brand-mark">AI <span>LAB</span></span>
+      <span class="brand-word">ENTERPRISE</span>
+      <span class="brand-tag">THE AI POWERED ENTERPRISE</span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#category">Category</a><a href="#architecture">Architecture</a><a href="#how">How it works</a><a href="#proof">Proof</a>
+    </nav>
+    <div class="footer-legal">
+      <p>© <span id="year">2026</span> AI LAB ENTERPRISE.</p>
+      <p>AI LAB SCHOOL · FEATURED ON SHARK TANK, FORBES, ENTREPRENEUR, EXPANSIÓN, YAHOO NEWS.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Story modal -->
+<div class="modal" id="story-modal" role="dialog" aria-modal="true" aria-labelledby="story-title" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-box panel">
+    <button class="modal-close" data-close-modal aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button>
+    <div class="modal-screen">
+      <div class="chip3d mini" aria-hidden="true"><div class="chip-glow"></div><div class="chip-stack"><div class="chip-layer l1"></div><div class="chip-layer l2"></div><div class="chip-layer l3"></div><div class="chip-layer l4"><span>AI</span></div></div></div>
+      <div class="modal-progress"><span></span></div>
+    </div>
+    <h3 id="story-title">From AI Lab School to the AI Powered Enterprise</h3>
+    <p>The story of how a team that taught thousands to work with AI built the system that lets entire companies operate with it.</p>
+  </div>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
